@@ -45,6 +45,6 @@ Demo and documentation can be found on the [project page](https://viima.github.i
 
 ***
 
-** &copy; Viima Solutions Oy, 2018.**
+**&copy; Viima Solutions Oy, 2018.**
 
 *Modified from [jquery-share by ewebdev](https://github.com/ewebdev/jquery-share).*
