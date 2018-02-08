@@ -12,7 +12,7 @@ jQuery Social Share Bar is a simple but beautiful jQuery plugin for adding a flo
 - No tracking or external API calls
 - Uses Font Awesome icons
 
-*Originally built on top of [jquery-share by ewebdev](https://github.com/ewebdev/jquery-share).*
+*Based on [jquery-share by ewebdev](https://github.com/ewebdev/jquery-share).*
 
 ***
 
