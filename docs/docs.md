@@ -1,3 +1,8 @@
+<link href="/jquery-social-share-bar.css" rel="stylesheet"/>
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+<div id="share-bar"></div>
+
 ## jQuery Social Share Bar
 
 jQuery Social Share Bar is a simple but beautiful jQuery plugin for adding a floating social sharing bar to your website.
@@ -18,3 +23,10 @@ Originally built on top of [jquery-share by ewebdev](https://github.com/ewebdev/
 
 **&copy; Jesse Nieminen, Viima Solutions Oy**
 **License: MIT**
+
+<script src="/jquery.min.js"></script>
+<script src="/jquery-social-share-bar.js"></script>
+
+<script>
+  $('#share-bar').share();
+</script>
