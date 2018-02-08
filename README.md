@@ -39,8 +39,8 @@ Ten different social media channels are supported for sharing your content to.
 Demo and documentation can be found on the [project page](https://viima.github.io/jquery-social-share-bar/).
 
 
-*Based on [jquery-share by ewebdev](https://github.com/ewebdev/jquery-share).*
+### License: MIT
 
 ***
 
-**License: MIT**
+*Based on [jquery-share by ewebdev](https://github.com/ewebdev/jquery-share).*
