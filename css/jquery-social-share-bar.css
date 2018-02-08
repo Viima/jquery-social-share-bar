@@ -50,7 +50,7 @@
 .sharing-providers.circle > li > a {
   border-radius: 50%;
 }
-.sharing-providers > li > a:before {
+.sharing-providers > li > a {
   color: white;
   font-size: 25px;
 }
@@ -71,69 +71,39 @@
   background: #3b5998;
   
 }
-.sharing-providers > li.facebook a:before {
-  content: "\f09a";
-}
 
 .sharing-providers > li.googleplus:hover {
   background: #d14836;
-}
-.sharing-providers > li.googleplus a:before {
-  content: "\f0d5";
 }
 
 .sharing-providers > li.twitter:hover {
   background: #6CDFEA;
 }
-.sharing-providers > li.twitter a:before {
-  content: "\f099";
-}
 
 .sharing-providers > li.linkedin:hover {
   background: #0077B5;
-}
-.sharing-providers > li.linkedin a:before {
-  content: "\f0e1";
 }
 
 .sharing-providers > li.tumblr:hover {
   background: #2c4762;
 }
-.sharing-providers > li.tumblr a:before {
-  content: "\f173";
-}
 
 .sharing-providers > li.digg:hover {
   background: #333333;
-}
-.sharing-providers > li.digg a:before {
-  content: "\f1a6";
 }
 
 .sharing-providers > li.reddit:hover {
   background: #5f99cf;
 }
-.sharing-providers > li.reddit a:before {
-  content: "\f1a1";
-}
 
 .sharing-providers > li.pinterest:hover {
   background: #cb2027;
-}
-.sharing-providers > li.pinterest a:before {
-  content: "\f0d2";
 }
 
 .sharing-providers > li.stumbleupon:hover {
   background: #EB4924;
 }
-.sharing-providers > li.stumbleupon a:before {
-  content: "\f1a4";
-}
 
 .sharing-providers > li.email:hover {
   background: #E3A129;
-}
-.sharing-providers > li.email a:before {
-  content: "\f0e0";
 }
