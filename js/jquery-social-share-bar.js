@@ -38,7 +38,7 @@
           pageDesc = settings.pageDesc || $('head > meta[name="description"]').attr("content") || '',
           position = settings.position || 'left',
           theme = settings.theme || 'circle',
-          animate = settings.animate || true,
+          animate = settings.animate === false ? false : true,
           u = encodeURIComponent(pageUrl),
           t = encodeURIComponent(pageTitle);
 
@@ -98,13 +98,27 @@
     containerTemplate: function (props) {
       return '<ul class="sharing-providers"></ul>';
     },
+
     itemTemplate: function (props) {
+      var iconClasses = {
+        'facebook': 'fab fa-facebook-f',
+        'twitter': 'fab fa-twitter',
+        'linkedin': 'fab fa-linkedin-in',
+        'googleplus': 'fab fa-google-plus-g',
+        'pinterest': 'fab fa-pinterest-p',
+        'tumblr': 'fab fa-tumblr',
+        'stumbleupon': 'fab fa-stumbleupon',
+        'reddit': 'fab fa-reddit-alien',
+        'digg': 'fab fa-digg',
+        'email': 'fas fa-envelope',
+      }
+
       // Special handling for email and Google+
       var providerName = props.provider === 'email' ? 'email' : props.provider === 'googleplus' ? 'Google+' : props.provider.charAt(0).toUpperCase() + props.provider.slice(1);
 
       return '<li class="' + props.provider + '">' +
         '<a href="#" data-href="' + props.href + '" title="Share this page ' + (props.provider === 'email' ? 'via ' : 'on ') + providerName + '" class=' + props.itemTriggerClass + ' ' + props.provider + '">' +
-        '<i class="icon-' + props.provider + '">' +
+        '<i class="' + iconClasses[props.provider] + '"></i>' +
         '</a>' +
         '</li>';
     }

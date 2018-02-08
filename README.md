@@ -16,7 +16,7 @@ It's small and easy-to-use and doesn't track the shares or make other API calls,
 - Super simple to add to any web page
 - Simple animations to keep things interesting
 - No tracking or external API calls
-- Uses Font Awesome icons
+- Uses Font Awesome SVG for cross-browser support
 
 ### Supported channels
 
