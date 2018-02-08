@@ -13,7 +13,7 @@
   $.fn.share = function (method) {
 
     var helpers = {
-      networks: {
+      channels: {
         facebook: {url: 'https://www.facebook.com/share.php?u=|u|'},
         twitter: {url: 'https://twitter.com/share?url=|u|&text=|140|'},
         linkedin: {url: 'https://www.linkedin.com/shareArticle?mini=true&url=|u|&title=|t|&summary=|d|'},
@@ -59,9 +59,9 @@
           $element.addClass(theme);
 
           // Append HTML for each network button
-          for (var item in settings.networks) {
-            item = settings.networks[item];
-            href = helpers.networks[item].url;
+          for (var item in settings.channels) {
+            item = settings.channels[item];
+            href = helpers.channels[item].url;
             href = href.replace('|u|', u).replace('|t|', t).replace('|d|', d)
               .replace('|140|', t.substring(0, 130));
             $(settings.itemTemplate({provider: item, href: href, itemTriggerClass: settings.itemTriggerClass})).appendTo($element);
@@ -93,7 +93,7 @@
   $.fn.share.defaults = {
     popupWidth: 640,
     popupHeight: 528,
-    networks: ['facebook', 'twitter', 'linkedin', 'googleplus', 'email'],
+    channels: ['facebook', 'twitter', 'linkedin', 'googleplus', 'email'],
     itemTriggerClass: 'js-share',
     containerTemplate: function (props) {
       return '<ul class="sharing-providers"></ul>';

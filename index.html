@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery Social Share Bar by Viima</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple but beautiful jQuery plugin for easily adding a floating social sharing bar to your site.">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link href="css/jquery-social-share-bar.css" rel="stylesheet"/>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-41980270-6', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+
+      // Create sidebar dynamically
+      $(function() {
+        $('h3').each(function(index, el) {
+            el = $(el);
+            var id = 'link-' + index;
+            el.attr('id', id);
+            var listEl = $('<a/>').html(el.html());  
+            listEl.attr('href', '#' + id);
+            $('.sidebar').append(listEl);
+
+            if(el.next().is('table')) {
+                var table = el.next();
+                table.find('th').each(function(index, th) {
+                    th = $(th);
+                    var id2 = id + '-' + index;
+                    th.attr('id', id2);
+
+                    var listEl2 = $('<a/>').html(th.text()).addClass('level-2'); 
+                    listEl2.attr('href', '#' + id2);
+                    $('.sidebar').append(listEl2);
+                });
+            }
+        });
+      });
+
+    </script>
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">jQuery Social Share Bar</h1>
+      <h2 class="project-tagline">A simple but beautiful jQuery plugin for easily adding a floating social sharing bar to your site.</h2>
+      <a href="https://viima.github.io/jquery-social-share-bar" class="btn">View on GitHub</a>
+      <a href="https://viima.github.io/jquery-social-share-bar/zipball/master" class="btn">Download .zip</a>
+    </section>
+
+    <section class="main-content">
+
+        <div id="share-bar"></div>
+        <div class="sidebar"></div>
+
+        <div class="content">
+            <h1><a id="jquery-social-share-bar" class="anchor" href="#jquery-social-share-bar" aria-hidden="true"><span class="octicon octicon-link"></span></a>jQuery Social Share Bar</h1>
+
+            <p>jQuery Social Share Bar is a simple but beautiful jQuery plugin for easily adding a floating social sharing bar to your site. <br><br>
+            It's small and easy-to-use and doesn't track the shares or make other API calls, which can cause privacy issues and slow things down.</p>
+
+            <p><img src="img/screenshot.png" alt="Screenshot of jquery-social-share-bar" title="Screenshot of jquery-social-share-bar"></p>
+
+            <h3>
+            <a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h3>
+
+            <ul>
+                <li>Minimalistically beautiful design</li>
+                <li>Floats on the same position when page is scrolled</li>
+                <li>Two themes: circular and square icons</li>
+                <li>Supports 10 different channels</li>
+                <li>Small file sizes, no bloat</li>
+                <li>Super simple to add to any web page</li>
+                <li>Simple animations to keep things interesting</li>
+                <li>No tracking or external API calls</li>
+                <li>Uses Font Awesome icons</li>
+            </ul>
+
+            <h3>
+            <a id="quick-start" class="anchor" href="#quick-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick start</h3>
+
+            <p><strong>1) Add the following files to the head section of your page</strong></p>
+<pre><code>&lt;link type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"&gt;
+&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;link rel="stylesheet" type="text/css" href="css/jquery-social-share-bar.css"&gt;
+&lt;script type="text/javascript" src="js/jquery-social-share-bar.js"&gt;&lt;/script&gt;
+</code></pre>
+            <p><strong>2) Add a container for the bar to be inserted into on the page</strong></p>
+            <pre><code>&lt;div id="share-bar"&gt;&lt;/div&gt;</code></pre>
+            
+
+            <p><strong>3) Initialize the library (preferably at the end of your body)</strong></p>
+            <pre><code>$('#share-bar').share();</code></pre>
+
+<h3>Demo</h3>
+<p>A demo can be seen hovering around on the left side of this page.</p>
+
+<h3>
+<a id="supported-services" class="anchor" href="#supported-services" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported channels</h3>
+
+<p>Ten different social media channels are supported for sharing your content to. </p>
+
+<ul>
+    <li>Facebook</li>
+    <li>Twitter</li>
+    <li>LinkedIn</li>
+    <li>Google+</li>
+    <li>Pinterest</li>
+    <li>Reddit</li>
+    <li>Tumblr</li>
+    <li>StumbleUpon</li>
+    <li>Digg</li>
+    <li>Email</li>
+</ul>
+
+
+<h3>Configuration options</h3>
+
+<table>
+
+<tr><th colspan="2">Shared content</th></tr>
+
+<tr>
+<td><code>pageTitle</code></td>
+<td>
+<p>
+The title of the page to be shared. By default, the html <code>title</code> element shall be used.
+</p>
+<label>DEFAULT</label>  
+<code class="string">document.title</code>
+<label class="example">EXAMPLE</label>  
+<pre class="prettyprint linemus">
+$('#share-box').share({
+    pageTitle: 'Viima homepage'
+});
+</pre>
+</td>
+</tr>
+<tr>
+<td><code>pageUrl</code></td>
+<td>
+<p>
+The <code>url</code> to share. By default, the current address is used.
+</p>
+<label>DEFAULT</label>  
+<code class="string">window.location.href</code>
+<label class="example">EXAMPLE</label>
+<pre class="prettyprint linemus">
+$('#share-box').share({
+    pageUrl: 'https://www.viima.com'
+});
+</pre>
+</td>
+</tr>
+<tr>
+<td><code>pageDesc</code></td>
+<td>
+<p>
+A description of the site to share, as used by some networks. By default, the meta description of the page is used.
+</p>
+<label>DEFAULT</label>  
+<code class="string">$('head > meta[name="description"]').attr("content")</code>
+<label class="example">EXAMPLE</label>
+<pre class="prettyprint linemus">
+$('#share-box').share({
+    pageDesc: 'Viima is the best way to collect and develop ideas'
+});
+</pre>
+</td>
+</tr>
+
+<tr><th colspan="2">Appearance</th></tr>
+<tr>
+<td><code>position</code></td>
+<td>
+<p>
+Determines the position of the widget. Value has to be either <code>left</code> (default) or <code>right</code>.
+</p>
+<label>DEFAULT</label>  
+<code class="string">left</code>
+<label class="example">EXAMPLE</label>  
+<pre class="prettyprint linemus">
+$('#share-box').share({
+    position: 'right'
+});
+</pre>
+</td>
+</tr>
+
+<tr>
+<td><code>theme</code></td>
+<td>
+<p>
+Determines the theme used by the widget. Value has to be either <code>circle</code> (default) or <code>square</code>.
+</p>
+<label>DEFAULT</label>  
+<code class="string">circle</code>
+<label class="example">EXAMPLE</label>  
+<pre class="prettyprint linemus">
+$('#share-box').share({
+    upvoteIconURL: 'square'
+});
+</pre>
+</td>
+</tr>
+
+<tr>
+<td><code>animate</code></td>
+<td>
+<p>
+A <code>boolean</code> value for turning animations on or off.
+</p>
+<label>DEFAULT</label>  
+<code class="boolean">true</code>
+<label class="example">EXAMPLE</label>  
+<pre class="prettyprint linemus">
+$('#share-box').share({
+    animate: false
+});
+</pre>
+</td>
+</tr>
+
+<tr><th colspan="2">Channels</th></tr>
+<tr>
+<td><code>channels</code></td>
+<td>
+<p>
+Determines the channels used in the widget. Value has to be an <code>array</code> containing string names of the social media channels to show in the widget.
+</p>
+<label>DEFAULT</label>  
+<code class="array">['facebook', 'twitter', 'linkedin', 'googleplus', 'email']</code>
+<label class="example">EXAMPLE</label>  
+<pre class="prettyprint linemus">
+$('#share-bar').share({
+    'channels': ['reddit', 'stumbleupon', 'pinterest', 'digg', 'tumblr']
+});
+</pre>
+</td>
+</tr>
+
+</table>
+        <h3>
+        <a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h3>
+
+        <ul>
+        <li><a href="https://github.com/jquery/jquery">jQuery</a> &gt;= 1.9.0</li>
+        <li><a href="https://github.com/FortAwesome/Font-Awesome">Font Awesome</a></li>
+        </ul>
+
+        <h3>
+        <a id="maintainers" class="anchor" href="#maintainers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maintainers</h3>
+
+        <ul>
+        <li>
+        <a href="https://www.linkedin.com/in/jessenieminen">Jesse Nieminen</a>, Viima Solutions Oy</li>
+        </ul>
+
+        <h3>
+        <a id="browser-support" class="anchor" href="#browser-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Browser support</h3>
+        <p>IE9+ and all modern browsers</p>
+
+        <h3>
+        <a id="copyright-and-license" class="anchor" href="#copyright-and-license" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copyright and license</h3>
+
+        <p>Code and documentation copyright 2018 <a href="https://www.viima.com/">Viima Solutions Oy</a>. Code released under <a href="https://github.com/Viima/jquery-comments/blob/master/LICENSE">the MIT license</a>.</p>
+
+        <script src="js/jquery-social-share-bar.js"></script>
+        <script>
+          $('#share-bar').share({
+            'channels': ['reddit', 'stumbleupon', 'digg', 'pinterest', 'tumblr']
+          });
+        </script>
+
+        <footer class="site-footer">
+            <span class="site-footer-owner"><a href="https://github.com/Viima/jquery-social-share-bar">jquery-social-share-bar</a> is maintained by <a href="https://github.com/Viima">Viima</a>.</span>
+        </footer>
+        </div>
+    </section>
+  </body>
+</html>
+
