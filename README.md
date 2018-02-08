@@ -17,4 +17,5 @@ Originally built on top of [jquery-share by ewebdev](https://github.com/ewebdev/
 ***
 
 **&copy; Jesse Nieminen, Viima Solutions Oy**
+
 **License: MIT**
