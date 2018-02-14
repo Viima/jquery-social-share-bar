@@ -11,6 +11,7 @@ It's small and easy-to-use and doesn't track the shares or make other API calls,
 - Minimalistically beautiful design
 - Floats on the same position when page is scrolled
 - Two themes: circular and square icons
+- Responsive behavior: bar automatically moves to bottom of screen on mobile
 - Supports 10 different channels
 - Small file sizes, no bloat
 - Super simple to add to any web page
