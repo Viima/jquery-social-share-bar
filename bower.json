@@ -1,7 +1,7 @@
 {
   "name": "jquery-social-share-bar",
   "description": "A simple but beautiful jQuery plugin for easily adding a floating social sharing bar to your site.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "index.html",
   "authors": [
     "Jesse Nieminen"
