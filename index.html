@@ -151,7 +151,7 @@ The title of the page to be shared. By default, the html <code>title</code> elem
 <code class="string">document.title</code>
 <label class="example">EXAMPLE</label>  
 <pre class="prettyprint linemus">
-$('#share-box').share({
+$('#share-bar').share({
     pageTitle: 'Viima homepage'
 });
 </pre>
@@ -167,7 +167,7 @@ The <code>url</code> to share. By default, the current address is used.
 <code class="string">window.location.href</code>
 <label class="example">EXAMPLE</label>
 <pre class="prettyprint linemus">
-$('#share-box').share({
+$('#share-bar').share({
     pageUrl: 'https://www.viima.com'
 });
 </pre>
@@ -183,7 +183,7 @@ A description of the site to share, as used by some networks. By default, the me
 <code class="string">$('head > meta[name="description"]').attr("content")</code>
 <label class="example">EXAMPLE</label>
 <pre class="prettyprint linemus">
-$('#share-box').share({
+$('#share-bar').share({
     pageDesc: 'Viima is the best way to collect and develop ideas'
 });
 </pre>
@@ -201,7 +201,7 @@ Determines the position of the widget. Value has to be either <code>left</code> 
 <code class="string">left</code>
 <label class="example">EXAMPLE</label>  
 <pre class="prettyprint linemus">
-$('#share-box').share({
+$('#share-bar').share({
     position: 'right'
 });
 </pre>
@@ -218,8 +218,8 @@ Determines the theme used by the widget. Value has to be either <code>circle</co
 <code class="string">circle</code>
 <label class="example">EXAMPLE</label>  
 <pre class="prettyprint linemus">
-$('#share-box').share({
-    upvoteIconURL: 'square'
+$('#share-bar').share({
+    theme: 'square'
 });
 </pre>
 </td>
@@ -235,7 +235,7 @@ A <code>boolean</code> value for turning animations on or off.
 <code class="boolean">true</code>
 <label class="example">EXAMPLE</label>  
 <pre class="prettyprint linemus">
-$('#share-box').share({
+$('#share-bar').share({
     animate: false
 });
 </pre>
