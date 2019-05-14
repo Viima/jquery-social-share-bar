@@ -94,11 +94,11 @@
 }
 
 .sharing-providers > li.reddit:hover {
-  background: #5f99cf;
+  background: #FF4500;
 }
 
 .sharing-providers > li.pinterest:hover {
-  background: #cb2027;
+  background: #E60023;
 }
 
 .sharing-providers > li.stumbleupon:hover {
